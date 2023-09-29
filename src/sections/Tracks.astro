@@ -1,0 +1,99 @@
+---
+import Track from "../components/Track.astro";
+
+const localData = [
+  {
+    label: "Foodtech",
+    title: "Оптимизация доставки",
+    image: "./Card_new.png",
+    description: `Start spending worldwide with your brand new digital or physical Mastercard debit card.`,
+    color: "#19624C",
+    light: false,
+  },
+  {
+    label: "Fintech",
+    title: "Мобильный брокеринг",
+    image: "./портфель.svg",
+    description: `Решение для клиентов Payme, которое позволит
+покупать акции компаний прямо в мобильном приложении.`,
+    color: "#dfe8e5",
+    light: true,
+  },
+  {
+    label: "Foodtech",
+    title: "Языковые модели",
+    image: "./llm.svg",
+    description: `Чтобы все работало как надо и никогла не глючило`,
+    color: "#ffb8ff",
+    light: true,
+  },
+  {
+    label: "Foodtech",
+    title: "Телеграм бот",
+    image: "./tg.svg",
+    description: `Приемка заказов`,
+    color: "#b8330f",
+    light: false,
+  },
+  {
+    label: "Welness",
+    title: "Get paid in USD, hassle-free.",
+    image: null,
+    description: null,
+    color: "#fbe274",
+    light: false,
+  },
+  {
+    label: "Fintech",
+    title: "Управление накоплениями",
+    image: "./cash.png",
+    description: `Решение для клиентов Payme, которое позволит
+покупать акции компаний прямо в мобильном приложении.`,
+    color: "#dfe8e5",
+    light: true,
+  },
+  {
+    label: "Foodtech",
+    title: "Оптимизация доставки",
+    image: "./Card_new.png",
+    description: `Start spending worldwide with your brand new digital or physical Mastercard debit card.`,
+    color: "#bec7e7",
+    light: true,
+  },
+];
+---
+
+<section class="Tracks">
+  <h6>Треки <img src="./south_east_FILL0.svg" alt="" /></h6>
+  <div class="Frame">
+    {
+      localData
+        .map((el) => (
+          <Track
+            image={el.image}
+            title={el.title}
+            label={el.label}
+            description={el.description}
+            color={el.color}
+            light={el.light}
+          />
+        ))
+        .slice(0, 4)
+    }
+  </div>
+</section>
+
+<style lang="scss">
+  section.Tracks {
+    @apply w-[80%] mx-auto;
+    h6 {
+      @apply mb-10;
+      img {
+        @apply inline-block w-[20px];
+      }
+    }
+    .Frame {
+      @apply columns-2;
+    }
+  }
+</style>

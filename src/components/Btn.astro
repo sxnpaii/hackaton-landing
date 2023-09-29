@@ -1,0 +1,15 @@
+---
+const { href, className } = Astro.props;
+---
+
+<a href={href} class={className}>
+  <slot />
+  <!-- svg -->
+  <span> →</span>
+</a>
+
+<style lang="scss">
+  a {
+    @apply bg-white transition hover:bg-transparent text-black hover:text-white border py-1 px-10 rounded-full font-normal font-['Inter'] leading-10;
+  }
+</style>

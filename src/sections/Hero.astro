@@ -1,0 +1,57 @@
+---
+// import "";
+
+import Btn from "../components/Btn.astro";
+---
+
+<section class="Hero">
+  <h6>
+    Nation
+    <img src="./favicon.svg" alt="logo" />
+     Hack
+  </h6>
+  <img src="./Moon.png" class="Moon" />
+
+  <div class="Text">
+    <h1>
+      Решай проблему <img src="./ArtHero.png" alt="" /> бизнеса 
+      <br class="max-md:hidden">
+       и побеждай на <img src="./favicon.svg" alt=""> лучшем <span>хакатоне</span>
+    </h1>
+
+    <Btn href="/">Записаться</Btn>
+  </div>
+
+</section>
+
+
+
+
+<!-- styles -->
+<style lang="scss">
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kufam:wght@400;500;600;700;800;900&display=swap");
+  section.Hero {
+    @apply h-screen;
+    h6 {
+      @apply text-3xl md:text-5xl font-medium font-['Kufam'] max-md:text-center translate-y-16;
+      img {
+        @apply inline-block;
+      }
+    }
+    img.Moon {
+      @apply max-w-[350px] w-[70%] absolute top-0 right-0 max-md:hidden;
+    }
+    .Text {
+      @apply h-full flex items-center justify-center flex-col text-center;
+      h1 {
+        @apply text-4xl md:text-5xl font-normal font-['Inter'] mb-20;
+        img {
+          @apply inline-block max-md:w-[42px]
+        }
+        span{
+          @apply rounded-full border-4  px-3
+        }
+      }
+    }
+  }
+</style>
