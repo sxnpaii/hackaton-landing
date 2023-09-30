@@ -1,8 +1,8 @@
 ---
-const { image, title, description, label, color, light } = Astro.props;
+const { image, title, description, label, color, light, className } = Astro.props;
 ---
 
-<div class="Track" style={`background: ${color}; ${light? "color: black;": "color: white;" }`}>
+<div class={`Track ${className ? className : ""}`} style={`background: ${color}; ${light? "color: black;": "color: white;" }`}>
   <b>{label}</b>
   <img src={image} alt="" />
   <h4>{title}</h4>
@@ -11,19 +11,21 @@ const { image, title, description, label, color, light } = Astro.props;
 
 <style lang="scss">
   .Track {
-    @apply break-inside-avoid mb-[40px] mx-3 rounded-3xl md:px-[65px] px-8 md:py-[47px] py-6;
-    
+    @apply mb-[40px] mx-3 rounded-3xl lg:px-8 px-5 lg:py-6 py-6;
+    &:not(.full){
+      @apply lg:w-[48%] w-full
+    }
     b{
-      @apply inline-block mb-3 font-['Inter']
+      @apply block mb-3 font-['Inter']
     }
     img{
-      @apply mb-20
+      @apply mx-auto max-w-[250px] w-full mb-20
     }
-    h4 {
+    h4 {  
       @apply font-['Inter'] text-3xl font-semibold mb-5;
     }
     p{
-      @apply font-normal font-['Inter'] opacity-50
+      @apply font-normal font-['Inter'] opacity-50 max-w-[475px]
     }
   }
 </style>

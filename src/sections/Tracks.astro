@@ -41,7 +41,7 @@ const localData = [
     image: null,
     description: null,
     color: "#fbe274",
-    light: false,
+    light: true,
   },
   {
     label: "Fintech",
@@ -66,26 +66,76 @@ const localData = [
 <section class="Tracks">
   <h6>Треки <img src="./south_east_FILL0.svg" alt="" /></h6>
   <div class="Frame">
+    <div class="LeftSide">
+      {
+        localData
+          .map((el) => (
+            <Track
+              image={el.image}
+              title={el.title}
+              label={el.label}
+              description={el.description}
+              color={el.color}
+              light={el.light}
+              className="full"
+            />
+          ))
+          .slice(0, 2)
+      }
+    </div>
+    <div class="RightSide">
+      {
+        localData
+          .map((el) => (
+            <Track
+              image={el.image}
+              title={el.title}
+              label={el.label}
+              description={el.description}
+              color={el.color}
+              light={el.light}
+              className="full"
+            />
+          ))
+          .slice(2, 4)
+      }
+    </div>
+  </div>
     {
       localData
+        .filter((el) => el.image === null)
         .map((el) => (
           <Track
-            image={el.image}
             title={el.title}
-            label={el.label}
             description={el.description}
+            label={el.label}
             color={el.color}
             light={el.light}
+            className="full" 
           />
         ))
-        .slice(0, 4)
     }
-  </div>
+    <div class="Bottom">
+      {
+        localData
+          .map((el) => (
+            <Track
+              image={el.image}
+              title={el.title}
+              label={el.label}
+              description={el.description}
+              color={el.color}
+              light={el.light}
+            />
+          ))
+          .slice(5)
+      }
+    </div>
 </section>
 
 <style lang="scss">
   section.Tracks {
-    @apply w-[80%] mx-auto;
+    @apply xl:w-[81%] mx-auto w-full;
     h6 {
       @apply mb-10;
       img {
@@ -93,7 +143,16 @@ const localData = [
       }
     }
     .Frame {
-      @apply columns-2;
+      @apply flex items-end justify-center sm:justify-between max-sm:flex-wrap ;
+      .RightSide, .LeftSide {
+        @apply w-full
+      }
+    }
+    .Bottom{
+      @apply flex items-start justify-center max-sm:flex-wrap;
+      .Tracks{
+        @apply w-full;
+      }
     }
   }
 </style>

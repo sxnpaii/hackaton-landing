@@ -2,7 +2,7 @@
 
 ### Commit №000 
 
-- Project was created 
+- Project was created
 - Added dependencies
 - Created `Index` page
 - And sections of `Index` page
