@@ -3,8 +3,8 @@
 ---
 
 <section class="Title">
-  <img src="./cosmonaut.png" class="Cosmonaut" alt="" />
-  <div class="Frame">
+  <img src="./cosmonaut.png" class="Cosmonaut" alt="" data-aos="fade-down-left" data-aos-offset="300" data-aos-duration="700"/>
+  <div class="Frame" data-aos="zoom-in" data-aos-offset="300">
     <h2>
       <span> Первый хакатон <br /> в Узбекистане</span>
       <br /> где решают проблемы <br /> бизнеса.
@@ -27,13 +27,13 @@
     .Frame {
       @apply lg:w-[80%] mx-auto p-10 rounded-3xl bg-[#B6DBD0]  text-white;
       h2 {
-        @apply text-black font-['Inter'] max-sm:text-3xl text-xl sm:text-5xl md:text-7xl font-semibold;
+        @apply text-black font-Inter max-sm:text-3xl text-xl sm:text-5xl md:text-7xl font-semibold;
         span {
           @apply text-[#F3681A];
         }
       }
       p{
-        @apply text-black text-xs opacity-50 font-['Inter'] md:w-[40%]
+        @apply text-black text-xs opacity-50 font-Inter md:w-[40%]
       }
     }
   }

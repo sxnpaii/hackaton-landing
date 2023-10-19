@@ -1,66 +1,6 @@
 ---
 import Track from "../components/Track.astro";
-
-const localData = [
-  {
-    label: "Foodtech",
-    title: "Оптимизация доставки",
-    image: "./Card_new.png",
-    description: `Start spending worldwide with your brand new digital or physical Mastercard debit card.`,
-    color: "#19624C",
-    light: false,
-  },
-  {
-    label: "Fintech",
-    title: "Мобильный брокеринг",
-    image: "./портфель.svg",
-    description: `Решение для клиентов Payme, которое позволит
-покупать акции компаний прямо в мобильном приложении.`,
-    color: "#dfe8e5",
-    light: true,
-  },
-  {
-    label: "Foodtech",
-    title: "Языковые модели",
-    image: "./llm.svg",
-    description: `Чтобы все работало как надо и никогла не глючило`,
-    color: "#ffb8ff",
-    light: true,
-  },
-  {
-    label: "Foodtech",
-    title: "Телеграм бот",
-    image: "./tg.svg",
-    description: `Приемка заказов`,
-    color: "#b8330f",
-    light: false,
-  },
-  {
-    label: "Welness",
-    title: "Get paid in USD, hassle-free.",
-    image: null,
-    description: null,
-    color: "#fbe274",
-    light: true,
-  },
-  {
-    label: "Fintech",
-    title: "Управление накоплениями",
-    image: "./cash.png",
-    description: `Решение для клиентов Payme, которое позволит
-покупать акции компаний прямо в мобильном приложении.`,
-    color: "#dfe8e5",
-    light: true,
-  },
-  {
-    label: "Foodtech",
-    title: "Оптимизация доставки",
-    image: "./Card_new.png",
-    description: `Start spending worldwide with your brand new digital or physical Mastercard debit card.`,
-    color: "#bec7e7",
-    light: true,
-  },
-];
+import { TracksSectData } from "../utils/localdata";
 ---
 
 <section class="Tracks">
@@ -68,89 +8,87 @@ const localData = [
   <div class="Frame">
     <div class="LeftSide">
       {
-        localData
-          .map((el) => (
-            <Track
-              image={el.image}
-              title={el.title}
-              label={el.label}
-              description={el.description}
-              color={el.color}
-              light={el.light}
-              className="full"
-            />
-          ))
-          .slice(0, 2)
+        TracksSectData.map((el) => (
+          <Track
+            image={el.image}
+            title={el.title}
+            label={el.label}
+            description={el.description}
+            color={el.color}
+            light={el.light}
+            className="full"
+            route={el.route}
+
+          />
+        )).slice(0, 2)
       }
     </div>
     <div class="RightSide">
       {
-        localData
-          .map((el) => (
-            <Track
-              image={el.image}
-              title={el.title}
-              label={el.label}
-              description={el.description}
-              color={el.color}
-              light={el.light}
-              className="full"
-            />
-          ))
-          .slice(2, 4)
+        TracksSectData.map((el) => (
+          <Track
+            image={el.image}
+            title={el.title}
+            label={el.label}
+            description={el.description}
+            color={el.color}
+            light={el.light}
+            className="full"
+            route={el.route}
+            
+          />
+        )).slice(2, 4)
       }
     </div>
   </div>
+  {
+    TracksSectData.filter((el) => el.image === null).map((el) => (
+      <Track
+        title={el.title}
+        description={el.description}
+        label={el.label}
+        color={el.color}
+        light={el.light}
+        className="full"
+      />
+    ))
+  }
+  <div class="Bottom">
     {
-      localData
-        .filter((el) => el.image === null)
-        .map((el) => (
-          <Track
-            title={el.title}
-            description={el.description}
-            label={el.label}
-            color={el.color}
-            light={el.light}
-            className="full" 
-          />
-        ))
+      TracksSectData.map((el) => (
+        <Track
+          image={el.image}
+          title={el.title}
+          label={el.label}
+          description={el.description}
+          color={el.color}
+          light={el.light}
+          route={el.route}
+        />
+      )).slice(5)
     }
-    <div class="Bottom">
-      {
-        localData
-          .map((el) => (
-            <Track
-              image={el.image}
-              title={el.title}
-              label={el.label}
-              description={el.description}
-              color={el.color}
-              light={el.light}
-            />
-          ))
-          .slice(5)
-      }
-    </div>
+  </div>
 </section>
 
 <style lang="scss">
   section.Tracks {
-    @apply xl:w-[81%] mx-auto w-full;
+    @apply xl:w-[81%] mx-auto w-full mb-36;
     h6 {
-      @apply mb-10;
+      @apply font-['Inter'] mb-10;
       img {
         @apply inline-block w-[20px];
       }
     }
     .Frame {
-      @apply flex items-end justify-center sm:justify-between max-sm:flex-wrap ;
-      .RightSide, .LeftSide {
-        @apply w-full
+      @apply flex items-end justify-center sm:justify-between max-sm:flex-wrap;
+      .RightSide,
+      .LeftSide {
+        @apply w-full;
       }
     }
-    .Bottom{
+    .Bottom {
       @apply flex items-start justify-center max-sm:flex-wrap;
-      .Tracks{
+      .Tracks {
         @apply w-full;
       }
     }

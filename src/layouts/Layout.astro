@@ -1,0 +1,29 @@
+---
+const { title,  className } = Astro.props;
+import { ViewTransitions } from "astro:transitions";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body>
+		<main class={className}>
+			<slot />
+		</main>
+		<style lang="scss">
+			@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kufam:wght@400;500;600;700;800;900&display=swap");
+			body {
+				@apply bg-black text-white lg:px-14 px-3;
+				main {
+					@apply overflow-x-hidden;
+				}
+			}
+		</style>
+	</body>
+</html>

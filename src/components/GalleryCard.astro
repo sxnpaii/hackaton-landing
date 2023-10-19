@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+const { ImgData, className } = Astro.props;
+---
+
+<div class={`GalleryCard ${className}`}>
+  <Image
+    src={ImgData.image}
+    alt={ImgData.description}
+    width={300}
+    height={300}
+  />
+  <div class="bottom">
+    <h6>{ImgData.title}</h6>
+    <p>{ImgData.description}</p>
+  </div>
+</div>
+
+<style lang="scss">
+  .GalleryCard {
+    @apply transition opacity-60 blur-sm hover:scale-105 hover:opacity-100 hover:blur-0 mb-4;
+    .bottom {
+      @apply py-3 px-6 bg-[#141414];
+      h6 {
+        @apply text-white font-normal font-Inter leading-none mb-1;
+      }
+      p {
+        @apply text-neutral-400 text-[10px] font-normal font-Inter leading-tight;
+      }
+    }
+  }
+</style>
