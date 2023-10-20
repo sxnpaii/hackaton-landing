@@ -7,42 +7,42 @@ import GalleryCard from "../components/GalleryCard.astro";
   <h6>Прошлые хакатоны</h6>
   <h4>Как это было</h4>
   <div class="ImagesGallery">
-    <div class="Column" transition:persist>
+    <div class="Column">
       {
         GallerySectData.map((el) => (
           <GalleryCard className="GCard" ImgData={el} />
         )).slice(0, 3)
       }
     </div>
-    <div class="Column" transition:persist>
+    <div class="Column">
       {
         GallerySectData.map((el) => (
           <GalleryCard className="GCard" ImgData={el} />
         )).slice(3, 6)
       }
     </div>
-    <div class="Column" transition:persist>
+    <div class="Column">
       {
         GallerySectData.map((el) => (
           <GalleryCard className="GCard" ImgData={el} />
         )).slice(6, 9)
       }
     </div>
-    <div class="Column" transition:persist>
+    <div class="Column">
       {
         GallerySectData.map((el) => (
           <GalleryCard className="GCard" ImgData={el} />
         )).slice(9, 12)
       }
     </div>
-    <div class="Column" transition:persist>
+    <div class="Column">
       {
         GallerySectData.map((el) => (
           <GalleryCard className="GCard" ImgData={el} />
         )).slice(12, 15)
       }
     </div>
-    <div class="Column" transition:persist>
+    <div class="Column">
       {
         GallerySectData.map((el) => (
           <GalleryCard className="GCard" ImgData={el} />

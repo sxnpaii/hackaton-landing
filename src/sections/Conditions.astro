@@ -5,25 +5,25 @@ import {ConditionsSectData} from "../utils/localdata"
 <section class="Conditions">
   <h6>Документация хакатона</h6>
   <h3>Наши правила</h3>
-  <div class="InnerFrame">
+  <div class="InnerFrame"  data-aos="zoom-in" data-aos-duration="400">
     <span>$</span>
     <div class="Head">
       <div class="Text">
-        <h4>Условия участия</h4>
-        <p>
+        <h4 data-aos="fade-up" data-aos-duration="400">Условия участия</h4>
+        <p data-aos="fade-up" data-aos-duration="800">
           Условия необходимые для подачи заявки об участии в хакатоне для команд
           и одиночных участников.
         </p>
       </div>
-      <img src="./Registan.png" />
+      <img src="./Registan.png" data-aos="fade-left" data-aos-delay="300" data-aos-duration="400" />
     </div>
     <ul class="Body">
       {
         ConditionsSectData &&
           ConditionsSectData.map((el) => (
             <li>
-              <span>{el.num}</span>
-              <p>{el.text}</p>
+              <span data-aos="fade-up" data-aos-duration="400">{el.num}</span>
+              <p data-aos="fade-up" data-aos-duration="800">{el.text}</p>
             </li>
           ))
       }

@@ -114,22 +114,22 @@ src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"
       @apply text-center text-neutral-100 text-3xl md:text-5xl font-normal font-Inter leading-10 mb-11; 
     }
     swiper-container {
-      @apply max-sm:w-[77%] xl:w-[40%] mx-auto;
+      @apply max-sm:w-[90%] sm:w-[70%] lg:w-[50%] mx-auto;
       swiper-slide {
         @apply relative h-auto;
         img.BG {
           @apply mx-auto w-full h-auto;
         }
         .inner {
-          @apply absolute top-0 w-full h-full p-9;
+          @apply absolute top-0 w-full h-full sm:p-9 p-5;
           h6 {
-            @apply text-neutral-800 text-2xl font-bold font-Inter leading-snug text-center mb-9;
+            @apply text-neutral-800 sm:text-2xl font-bold font-Inter leading-snug text-center sm:mb-9 mb-5;
             img {
-              @apply inline-block max-w-[50px] mr-2;
+              @apply inline-block max-w-[30px] sm:max-w-[50px] mr-2;
             }
           }
           .main_img {
-            @apply rounded-xl bg-[#A08181] min-h-[210px] mb-16;
+            @apply rounded-xl bg-[#A08181] min-h-[40%] xl:mb-16 sm:mb-10 mb-5;
           }
           .timeline {
             @apply flex items-center justify-between gap-x-6 mb-7;
@@ -147,7 +147,7 @@ src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"
             }
           }
           .CBottom {
-            @apply absolute left-0 bottom-0 p-9 w-full h-[25%] flex justify-between items-center border-t-4 border-dotted border-stone-400;
+            @apply absolute left-0 bottom-0 sm:p-9 p-5 w-full h-[25%] flex justify-between items-center border-t-4 border-dotted border-stone-400;
             p {
               @apply max-w-[270px] text-neutral-400 sm:text-3xl font-semibold font-Inter;
             }   

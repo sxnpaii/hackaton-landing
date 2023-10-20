@@ -1,6 +1,8 @@
 ---
 // layout
 import Layout from "../layouts/Layout.astro"
+// AOS defaults
+import AOS from "../components/AOS.astro";
 // sections
 import Hero from "../sections/Hero.astro";
 import Title from "../sections/Title.astro";
@@ -9,6 +11,7 @@ import Prizes from "../sections/Prizes.astro";
 import Conditions from "../sections/Conditions.astro";
 import TimeLine from "../sections/TimeLine.astro";
 import Gallery from "../sections/Gallery.astro";
+import SignUp from "../sections/SignUp.astro";
 // ssr
 export const prerender = true
 ---
@@ -21,27 +24,7 @@ export const prerender = true
 		<Conditions/>	
 		<TimeLine/>
 		<Gallery />
+		<SignUp/>
+		<!-- AOS defaults -->
+		<AOS/>
 	</Layout>
-	<script>
-		import AOS from "aos";
-		import "aos/dist/aos.css";
-
-		AOS.init();
-		AOS.init({
-			disable: false,
-			startEvent: "DOMContentLoaded",
-			initClassName: "aos-init",
-			animatedClassName: "aos-animate",
-			useClassNames: false,
-			disableMutationObserver: false,
-			debounceDelay: 50,
-			throttleDelay: 99,
-			offset: 120,
-			delay: 0,
-			duration: 400,
-			easing: "ease",
-			once: false,
-			mirror: false,
-			anchorPlacement: "top-bottom",
-		});
-	</script>

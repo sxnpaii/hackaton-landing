@@ -6,7 +6,9 @@ import { TracksSectData } from "../utils/localdata";
 <section class="Tracks">
   <h6>Треки <img src="./south_east_FILL0.svg" alt="" /></h6>
   <div class="Frame">
-    <div class="LeftSide">
+    <div class="LeftSide"
+    data-aos="fade-up"
+    >
       {
         TracksSectData.map((el) => (
           <Track
@@ -18,6 +20,7 @@ import { TracksSectData } from "../utils/localdata";
             light={el.light}
             className="full"
             route={el.route}
+            pos="left"
 
           />
         )).slice(0, 2)
@@ -35,7 +38,7 @@ import { TracksSectData } from "../utils/localdata";
             light={el.light}
             className="full"
             route={el.route}
-            
+            pos="right"
           />
         )).slice(2, 4)
       }
@@ -50,6 +53,7 @@ import { TracksSectData } from "../utils/localdata";
         color={el.color}
         light={el.light}
         className="full"
+        pos="up"
       />
     ))
   }
@@ -64,6 +68,7 @@ import { TracksSectData } from "../utils/localdata";
           color={el.color}
           light={el.light}
           route={el.route}
+          pos="up"
         />
       )).slice(5)
     }

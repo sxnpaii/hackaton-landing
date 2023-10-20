@@ -1,0 +1,43 @@
+---
+import SignUserCard from "../components/SignUserCard.astro";
+import {SignUpSectdata} from "../utils/localdata"
+---
+
+<section class="SignUp">
+    <h6>Регистрация</h6>
+    <h4>Зарегистрироваться одному или с командой. Выбирай.</h4>
+    <div class="InnerFrame">
+        {
+            SignUpSectdata.map((el) => (
+                    <SignUserCard data={el}/>
+            ))
+        }
+    </div>
+    <p> Есть вопросы ил и нашли ошибку, напишите в службу поддержки </p>
+    <a href="/">Служба поддержки →</a>
+</section>
+
+<style lang="scss">
+    section.SignUp {
+    h6 {
+        @apply text-center text-orange-600 text-[22px] font-normal font-Inter leading-[33.60px] mb-3
+    }
+
+    h4 {
+        @apply max-w-[665px] mx-auto text-center text-neutral-100 text-[37px] font-normal font-Inter leading-[48px] mb-11;
+    }
+
+    .InnerFrame {
+        @apply flex items-center justify-center gap-x-10 max-md:flex-wrap mb-8;
+    }
+
+    p {
+        @apply text-center text-neutral-400 text-[22px] font-normal font-Inter leading-[33.60px]
+    }
+
+    a {
+        @apply block text-center text-neutral-100 text-[22px] font-normal font-Inter leading-[33.60px] hover:underline
+    }
+
+    }
+</style>

@@ -27,3 +27,12 @@
 - Stored additional local UI data in `utils/localdata.js`
 - Added `AOS` minimal scroll animations
 - Init `AppWrite` and authorized client SDK
+
+### Commit №003
+
+- Created **SignUp** section
+- Created component `SignUserCard` for **SignUp** section
+- Modified sections
+- Responsive Slider in **Prizes** section
+- Added `AOS` animations to some sections
+- Separated `AOS` defaults from `index` page to component `AOS.astro`

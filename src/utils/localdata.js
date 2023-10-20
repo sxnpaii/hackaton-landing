@@ -55,7 +55,7 @@ export const TracksSectData = [
     light: true,
     route: "savings-management"
   },
-  
+
 ];
 
 export const ConditionsSectData = [
@@ -182,3 +182,26 @@ export const GallerySectData =
       description: "Retro Repetition by @daniltabacari"
     }
   ]
+
+export const SignUpSectdata = [
+  {
+    image: "/Alone.svg",
+    title: "Один",
+    info: [
+      "Укажи свой профиль",
+      "Получи доступ к чату",
+      "Задавай вопросы",
+      "Найди единомышленников"
+    ]
+  },
+  {
+    image: "/Group.svg",
+    title: "Команда",
+    info: [
+      "Заполните профиль команды",
+      "Получи доступ к чату",
+      "Начните раньше других",
+      "Получите поддержку от трекеров"
+    ]
+  },
+]
