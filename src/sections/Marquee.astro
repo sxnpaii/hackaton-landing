@@ -1,0 +1,104 @@
+---
+import { MarqueeSectData } from "../utils/localdata";
+---
+
+<section class="Marquee">
+  <h6>О главном</h6>
+  <h4>Партнеры хакатона:</h4>
+  <div class="InnerFrame">
+    <div class="marquee marquee-right">
+      {
+        MarqueeSectData.map((brand) => (
+          <a href="/" class="mark">
+            <div class="circle" />
+            <h6>{brand.brand}</h6>
+            <img src="/arrow-right.svg" alt="" />
+          </a>
+        ))
+      }
+      {
+        MarqueeSectData.map((brand) => (
+          <a href="/" class="mark">
+            <div class="circle" />
+            <h6>{brand.brand}</h6>
+            <img src="/arrow-right.svg" alt="" />
+          </a>
+        ))
+      }
+    </div>
+    <div class="marquee marquee-left">
+      {
+        MarqueeSectData.map((brand) => (
+          <a href="/" class="mark">
+            <img src="/arrow-left.svg" alt="" />
+            <h6>{brand.brand}</h6>
+            <div class="circle" />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+  <p>Свяжитесь с нами если хотите стать партнером</p>
+</section>
+
+<style lang="scss">
+  .Marquee {
+    @apply mb-56;
+    h6{
+      @apply text-center text-orange-600 text-[22px] font-normal font-Inter leading-[33.60px];
+    }
+    h4{
+      @apply text-center text-neutral-100 text-4xl font-normal font-Inter leading-[48px] mb-12;
+    }
+    .InnerFrame {
+      @apply relative w-full;
+      .marquee {
+        @apply w-max flex gap-x-8;
+        a.mark {
+          @apply flex items-center gap-3;
+          .circle {
+            @apply rounded-full w-20 h-20 bg-[#454545];
+          }
+          h6 {
+            @apply text-neutral-100 text-4xl font-normal font-Inter;
+          }
+        }
+      }
+    }
+    p{
+      @apply text-center text-neutral-400 text-[22px] font-normal font-Inter leading-[33.60px] mt-11;
+    }
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap/all";
+  let marquee_left = document.querySelector(".marquee-left");
+  let marquee_right = document.querySelector(".marquee-right");
+  gsap.fromTo(
+    marquee_left,
+    {
+      xPercent: 100,
+      repeat: -1,
+      duration: 90
+    },
+    {
+      xPercent: -100,
+      repeat: -1,
+      duration: 90
+    },
+  );
+  gsap.fromTo(
+    marquee_right,
+    {
+      xPercent: -100,
+      repeat: -1,
+      duration: 90
+    },
+    {
+      xPercent: 100,
+      repeat: -1,
+      duration: 90
+    },
+  );
+</script>

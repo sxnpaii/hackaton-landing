@@ -1,38 +1,52 @@
 ---
+
 ---
 
 <section class="Title">
-  <img src="./cosmonaut.png" class="Cosmonaut" alt="" data-aos="fade-down-left" data-aos-duration="700"/>
+  <img
+    src="./cosmonaut.png"
+    class="Cosmonaut"
+    alt=""
+    data-aos="fade-down-left"
+    data-aos-duration="700"
+  />
   <div class="Frame" data-aos="zoom-in" data-aos-duration="400">
     <h2>
       <span> Первый хакатон <br /> в Узбекистане</span>
       <br /> где решают проблемы <br /> бизнеса.
     </h2>
-    <p>На хакатоне представлены реальные задачи от бизнес - партнеров проекта.</p>
+    <p>
+      На хакатоне представлены реальные задачи от бизнес - партнеров проекта.
+    </p>
   </div>
-  <img src="./cashmachine.png" alt="" class="Cashmachine"
-  data-aos="fade-up-right" data-aos-duration="700" />
+  <img
+    src="./cashmachine.png"
+    alt=""
+    class="Cashmachine"
+    data-aos="fade-up-right"
+    data-aos-duration="700"
+  />
 </section>
 
 <style lang="scss">
   section.Title {
-    @apply relative h-screen flex items-center mb-16;
+    @apply relative h-[70vh] sm:h-[80vh] flex items-center mb-16;
     img.Cosmonaut {
-      @apply absolute top-0 right-0;
+      @apply absolute top-0 right-0 max-md:max-w-[40%] max-w-[170px];
     }
     img.Cashmachine {
-      @apply absolute bottom-0 left-0;
+      @apply absolute bottom-0 left-0 max-md:max-w-[40%] max-w-[170px];
     }
     .Frame {
-      @apply lg:w-[80%] mx-auto p-10 rounded-3xl bg-[#B6DBD0]  text-white;
+      @apply lg:w-[80%] mx-auto p-5 sm:p-10 rounded-3xl bg-[#B6DBD0]  text-white;
       h2 {
-        @apply text-black font-Inter max-sm:text-3xl text-xl sm:text-5xl md:text-7xl font-semibold;
+        @apply text-black font-Inter max-sm:text-4xl sm:text-6xl md:text-7xl font-semibold;
         span {
           @apply text-[#F3681A];
         }
       }
-      p{
-        @apply text-black text-xs opacity-50 font-Inter md:w-[40%]
+      p {
+        @apply text-black text-xs opacity-50 font-Inter md:w-[40%];
       }
     }
   }

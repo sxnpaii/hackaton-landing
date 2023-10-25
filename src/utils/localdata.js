@@ -205,3 +205,61 @@ export const SignUpSectdata = [
     ]
   },
 ]
+
+export const MarqueeSectData = [
+  {
+    img: "",
+    brand: "Payme",
+    url: ""
+  },
+  {
+    img: "",
+    brand: "Damian",
+    url: ""
+  },
+  {
+    img: "",
+    brand: "BeFit",
+    url: ""
+  },
+  {
+    img: "",
+    brand: "Pizza 24",
+    url: ""
+  },
+  {
+    img: "",
+    brand: "Oson",
+    url: ""
+  },
+  {
+    img: "",
+    brand: "ITPark",
+    url: ""
+  },
+  {
+    img: "",
+    brand: "Fons",
+    url: ""
+  },
+  {
+    img: "",
+    brand: "Stephanie",
+    url: ""
+  },
+]
+
+export const ContactUsSectData = [
+  {
+    label: "Поддержка стартапов",
+    title: "Если есть шикарный проект?",
+    description: "Делаешь стартап и необходима экспертиза? Свяжись с нами!",
+    img: "/phraze.png"
+  },
+  {
+    label: "Корпорациям",
+    title: "Возможности для сотрудничества.",
+    description: "У вас есть запрос на продукт или совместный проект. Напишите нам!",
+    img: "/earth_sphere.png"
+  }
+]

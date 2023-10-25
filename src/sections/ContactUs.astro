@@ -1,0 +1,14 @@
+---
+import { ContactUsSectData } from "../utils/localdata";
+import ContactUsCard from "../components/ContactUsCard.astro";
+---
+
+<section class="ContactUs">
+  {ContactUsSectData.map((el) => <ContactUsCard data={el} />)}
+</section>
+
+<style lang="scss">
+  .ContactUs {
+    @apply flex items-center justify-center max-md:flex-wrap gap-6;
+  }
+</style>

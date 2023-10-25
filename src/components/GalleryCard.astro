@@ -17,8 +17,11 @@ const { ImgData, className } = Astro.props;
 </div>
 
 <style lang="scss">
+  .onhover{
+    @apply opacity-60 blur-sm;
+  }
   .GalleryCard {
-    @apply transition opacity-60 blur-sm hover:scale-105 hover:opacity-100 hover:blur-0 mb-4;
+    @apply transition hover:scale-105 hover:opacity-100 hover:blur-0 mb-4;
     .bottom {
       @apply py-3 px-6 bg-[#141414];
       h6 {

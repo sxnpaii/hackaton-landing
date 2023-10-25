@@ -64,26 +64,27 @@ import GalleryCard from "../components/GalleryCard.astro";
     .ImagesGallery {
       @apply flex items-end gap-6;
       .Column {
-         .GCard {
+        .GCard {
           // @apply blur-sm opacity-40;
         }
       }
       .Column:nth-child(2) {
-        @apply translate-y-16;
+        @apply translate-y-16 max-sm:hidden;
       }
       .Column:nth-child(3) {
-        @apply translate-y-36;
+        @apply translate-y-36 max-sm:hidden;
       }
       .Column:nth-child(4) {
-        @apply translate-y-52;
+        @apply translate-y-52 max-xl:hidden;
       }
       .Column:nth-child(5) {
-        @apply translate-y-16;
+        @apply translate-y-16 max-xl:hidden;
       }
     }
   }
 </style>
 <script>
+  // gsap animations
   import gsap from "gsap";
   let Columns = document.querySelectorAll(".Column");
   Columns.forEach((column, key) => {
@@ -95,7 +96,6 @@ import GalleryCard from "../components/GalleryCard.astro";
           duration: 7,
           repeat: -1,
           yoyo: true,
-          ease: "in",
         },
         {
           y: 50,
@@ -121,5 +121,20 @@ import GalleryCard from "../components/GalleryCard.astro";
         },
       );
     }
+  });
+
+  // hover events
+
+  let ImagesGallery = document.querySelector(".ImagesGallery");
+  let GCard = document.querySelectorAll(".GCard");
+  ImagesGallery.addEventListener("mouseover", () => {
+    GCard.forEach((el) => {
+      el.classList.add("onhover");
+    });
+  });
+  ImagesGallery.addEventListener("mouseout", () => {
+    GCard.forEach((el) => {
+      el.classList.remove("onhover");
+    });
   });
 </script>

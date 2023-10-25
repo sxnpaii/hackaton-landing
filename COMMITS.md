@@ -36,3 +36,11 @@
 - Responsive Slider in **Prizes** section
 - Added `AOS` animations to some sections
 - Separated `AOS` defaults from `index` page to component `AOS.astro`
+
+### Commit №004 (alpha-preview deployment)
+
+- Completed `index` page layout
+- Fixed responsibility on all sections of `index` and `[...route]` pages
+- Created component `Footer`
+- Completed **ContactUs**, **Marquee**, **Location** sections
+- Project deployed to `Vercel` via vercel CLI
