@@ -1,0 +1,27 @@
+.Marquee {
+  @apply mb-56;
+  h6{
+    @apply text-center text-orange-600 text-[22px] font-normal font-Inter leading-[33.60px];
+  }
+  h4{
+    @apply text-center text-neutral-100 text-4xl font-normal font-Inter leading-[48px] mb-12;
+  }
+  .InnerFrame {
+    @apply relative w-full;
+    .marquee {
+      @apply w-max flex gap-x-8;
+      a.mark {
+        @apply flex items-center gap-3;
+        .circle {
+          @apply rounded-full w-20 h-20 bg-[#454545];
+        }
+        h6 {
+          @apply text-neutral-100 text-4xl font-normal font-Inter;
+        }
+      }
+    }
+  }
+  p{
+    @apply text-center text-neutral-400 text-[22px] font-normal font-Inter leading-[33.60px] mt-11;
+  }
+}

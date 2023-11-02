@@ -1,6 +1,7 @@
 ---
 import { GallerySectData } from "../utils/localdata";
 import GalleryCard from "../components/GalleryCard.astro";
+import "../styles/pages-styles/indexPage/sections/Gallery.scss"
 ---
 
 <section class="Gallery">
@@ -52,37 +53,6 @@ import GalleryCard from "../components/GalleryCard.astro";
   </div>
 </section>
 
-<style lang="scss">
-  section.Gallery {
-    @apply overflow-hidden mb-20;
-    h6 {
-      @apply text-center text-orange-600 text-[22px] font-normal font-Inter mb-4;
-    }
-    h4 {
-      @apply text-center text-neutral-100 text-4xl font-normal font-Inter mb-20;
-    }
-    .ImagesGallery {
-      @apply flex items-end gap-6;
-      .Column {
-        .GCard {
-          // @apply blur-sm opacity-40;
-        }
-      }
-      .Column:nth-child(2) {
-        @apply translate-y-16 max-sm:hidden;
-      }
-      .Column:nth-child(3) {
-        @apply translate-y-36 max-sm:hidden;
-      }
-      .Column:nth-child(4) {
-        @apply translate-y-52 max-xl:hidden;
-      }
-      .Column:nth-child(5) {
-        @apply translate-y-16 max-xl:hidden;
-      }
-    }
-  }
-</style>
 <script>
   // gsap animations
   import gsap from "gsap";
@@ -96,12 +66,14 @@ import GalleryCard from "../components/GalleryCard.astro";
           duration: 7,
           repeat: -1,
           yoyo: true,
+          yoyoEase: "linear"
         },
         {
           y: 50,
           duration: 7,
           repeat: -1,
           yoyo: true,
+          yoyoEase: "linear"
         },
       );
     } else {
@@ -112,12 +84,14 @@ import GalleryCard from "../components/GalleryCard.astro";
           duration: 7,
           repeat: -1,
           yoyo: true,
+          yoyoEase: "linear"
         },
         {
           y: -50,
           duration: 7,
           repeat: -1,
           yoyo: true,
+          yoyoEase: "linear"
         },
       );
     }

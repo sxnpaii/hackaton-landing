@@ -1,0 +1,23 @@
+section.SignUp {
+    @apply mb-40;
+
+    h6 {
+        @apply text-center text-orange-600 text-[22px] font-normal font-Inter leading-[33.60px] mb-3;
+    }
+
+    h4 {
+        @apply max-w-[665px] mx-auto text-center text-neutral-100 text-[37px] font-normal font-Inter leading-[48px] mb-11;
+    }
+
+    .InnerFrame {
+        @apply flex items-center justify-center gap-10 max-md:flex-wrap mb-8;
+    }
+
+    p.support {
+        @apply text-center text-neutral-400 text-[22px] font-normal font-Inter leading-[33.60px];
+    }
+
+    a.support {
+        @apply block text-center text-neutral-100 text-[22px] font-normal font-Inter leading-[33.60px] hover:underline;
+    }
+}

@@ -11,11 +11,12 @@ const {
   pos,
 } = Astro.props;
 
-import {posStatus} from "../utils/localfunctions";
+import { posStatus } from "../utils/localfunctions";
+import "../styles/components-styles/Track.scss"
 ---
 
 <a
-href={route}
+  href={route}
   class={`Track ${className ? className : ""}`}
   style={`background: ${color}; ${light ? "color: black;" : "color: white;"}`}
   data-aos={`${posStatus(pos)}`}
@@ -26,24 +27,3 @@ href={route}
   <h4 transition:name={`title-${route}`}>{title}</h4>
   <p>{description}</p>
 </a>
-
-<style lang="scss">
-  .Track {
-    @apply block mb-[40px] mx-3 rounded-3xl lg:px-8 px-5 lg:py-6 py-6;
-    &:not(.full) {
-      @apply lg:w-[48%] w-full;
-    }
-    b {
-      @apply block mb-3 font-Inter;
-    }
-    img {
-      @apply mx-auto max-w-[250px] w-full mb-20;
-    }
-    h4 {
-      @apply font-Inter text-4xl font-semibold mb-5;
-    }
-    p {
-      @apply font-normal font-Inter opacity-50 max-w-[475px];
-    }
-  }
-</style>

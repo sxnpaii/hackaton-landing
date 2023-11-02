@@ -1,0 +1,15 @@
+.ContactUsCard {
+  @apply relative lg:w-[565px] min-h-[600px] lg:min-h-[750px] pt-20 rounded-xl bg-[#141414] text-center;
+  b {
+    @apply text-center text-orange-600  text-xl font-normal font-Inter leading-[33.60px];
+  }
+  h4 {
+    @apply max-w-[370px] mx-auto text-neutral-100 text-2xl sm:text-3xl lg:text-4xl font-normal font-Inter mb-2;
+  }
+  p {
+    @apply max-w-[400px] mx-auto text-neutral-400 lg:text-xl font-normal font-Inter  mb-12;
+  }
+  img {
+    @apply absolute bottom-0;
+  }
+}

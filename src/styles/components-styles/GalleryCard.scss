@@ -1,0 +1,15 @@
+.onhover{
+  @apply opacity-60 blur-sm;
+}
+.GalleryCard {
+  @apply transition hover:scale-105 hover:opacity-100 hover:blur-0 mb-4;
+  .bottom {
+    @apply py-3 px-6 bg-[#141414];
+    h6 {
+      @apply text-white font-normal font-Inter leading-none mb-1;
+    }
+    p {
+      @apply text-neutral-400 text-[10px] font-normal font-Inter leading-tight;
+    }
+  }
+}

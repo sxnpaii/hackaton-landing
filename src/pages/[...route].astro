@@ -1,5 +1,5 @@
 ---
-import Btn from "../components/Btn.astro";
+import Btn from "../components/Btn.jsx";
 import Layout from "../layouts/Layout.astro";
 // params
 const { route } = Astro.params;
@@ -20,14 +20,12 @@ const oneTrackData = TracksSectData.find((el) => el.route === route);
         <p>{oneTrackData.description}</p>
       </div>
     </div>
-    <div class="Image" 
-    style={`background: ${oneTrackData.color}`}
-    >
-      <b class={`${oneTrackData.light ? "text-black" : ""}`}
-        >{oneTrackData.label}</b
-      >
+    <div class="Image" style={`background: ${oneTrackData.color}`}>
+      <b class={`${oneTrackData.light ? "text-black" : ""}`}>
+        {oneTrackData.label}
+      </b>
       <img
-      transition:name={oneTrackData.route}
+        transition:name={oneTrackData.route}
         src={oneTrackData.image}
         alt={oneTrackData.title}
       />
@@ -36,7 +34,7 @@ const oneTrackData = TracksSectData.find((el) => el.route === route);
         class={`Btn ${oneTrackData.light ? "text-black border-black" : ""}`}
       >
         Подать заявку
-   <span>→</span>
+        <span>→</span>
       </a>
     </div>
   </section>
@@ -72,9 +70,9 @@ const oneTrackData = TracksSectData.find((el) => el.route === route);
         }
         a {
           @apply inline-block w-full py-[16px] px-[20px] md:px-[66px] border-2 rounded-full font-Inter font-bold hover:bg-white hover:text-black transition;
-          &:hover{
-            svg{
-              @apply fill-white
+          &:hover {
+            svg {
+              @apply fill-white;
             }
           }
         }

@@ -1,5 +1,5 @@
 ---
-
+import "../styles/pages-styles/indexPage/sections/Location.scss"
 ---
 
 <section class="Location">
@@ -19,26 +19,3 @@
       referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </section>
-
-<style lang="scss">
-  section.Location {
-    @apply lg:w-[80%] mx-auto relative rounded-2xl bg-white md:p-14 p-8 text-black mb-44;
-    .InnerFrame {
-      @apply flex items-center justify-between max-xl:flex-wrap max-xl:text-center gap-16;
-      .Text {
-        h4 {
-          @apply xl:max-w-[370px] xl:text-7xl md:text-6xl text-4xl font-semibold font-Inter leading-none mb-4;
-        }
-        p {
-          @apply opacity-50 text-[17px] font-normal font-Inter mb-3;
-        }
-        span {
-          @apply text-black text-opacity-40 text-[10px] font-normal font-Inter;
-        }
-      }
-      iframe {
-        @apply rounded-3xl max-xl:mx-auto max-xl:w-full xl:w-[384px];
-      }
-    }
-  }
-</style>

@@ -1,0 +1,24 @@
+section.Hero {
+  @apply h-screen;
+  h6 {
+    @apply text-3xl md:text-5xl font-medium font-Kufam max-md:text-center translate-y-16;
+    img {
+      @apply inline-block;
+    }
+  }
+  img.Moon {
+    @apply max-w-[350px] w-[70%] absolute top-0 right-0 max-md:hidden;
+  }
+  .Text {
+    @apply h-full flex items-center justify-center flex-col text-center;
+    h1 {
+      @apply text-4xl md:text-5xl font-normal font-Inter mb-20;
+      img {
+        @apply inline-block max-md:w-[42px];
+      }
+      span {
+        @apply rounded-full border-4  px-3;
+      }
+    }
+  }
+}

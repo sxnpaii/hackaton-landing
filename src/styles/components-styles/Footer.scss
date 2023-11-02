@@ -1,0 +1,14 @@
+footer {
+  @apply mt-20 mx-auto max-lg:w-[80%] min-h-[300px] flex items-start justify-around max-lg:flex-wrap max-sm:flex-col gap-6 ;
+  ul{
+    h6{
+      @apply text-neutral-500 text-xl font-normal font-Inter uppercase mb-5;
+    }
+    li{
+      @apply mb-2;
+      a{
+        @apply text-white text-base font-normal font-Inter uppercase hover:underline
+      }
+    }
+  }
+}

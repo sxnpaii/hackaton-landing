@@ -1,0 +1,71 @@
+dialog.Modal {
+  @apply max-sm:w-[90%] w-[80%] md:w-[70%] bg-black p-7 lg:px-[60px] lg:py-[70px] rounded-3xl text-white transition-all;
+
+  &::backdrop {
+    @apply bg-white bg-opacity-10 backdrop-blur-md;
+  }
+
+  .ModalHead {
+    @apply flex items-start justify-between mb-7;
+
+    .lighting {
+      @apply w-[30px] max-sm:hidden sm:w-auto;
+    }
+
+    h4 {
+      @apply text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-bold font-Inter leading-none;
+    }
+
+    .close {
+      @apply w-[30px] sm:w-auto cursor-pointer;
+    }
+  }
+
+  .ModalBody {
+    @apply flex items-center justify-center flex-wrap gap-12;
+
+    .InfoText {
+      @apply text-left xl:max-w-[265px];
+
+      p {
+        @apply text-stone-400 text-xl font-normal font-Inter leading-snug
+      }
+
+      span {
+        @apply text-white;
+      }
+    }
+
+    form {
+      @apply flex flex-col;
+
+      .gr {
+        @apply h-14 mb-11;
+
+        label {
+          @apply pointer-events-none transition text-stone-400 text-sm font-medium font-Inter;
+        }
+
+        input {
+          @apply w-[350px] block bg-transparent border-b border-zinc-600 transition p-2 scroll-smooth ;
+
+          &:focus {
+            @apply outline-none border-white;
+          }
+
+          &:last-child {
+            @apply w-full;
+          }
+        }
+      }
+
+      .required {
+        @apply columns-2 md:gap-x-12 gap-x-5;
+      }
+
+      button {
+        @apply w-max;
+      }
+    }
+  }
+}

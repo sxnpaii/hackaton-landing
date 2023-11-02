@@ -1,0 +1,42 @@
+.Conditions {
+  @apply lg:w-[80%] mx-auto mb-80;
+  h6 {
+    @apply text-center text-orange-600 text-xl font-normal font-Inter leading-loose mb-4;
+  }
+  h3 {
+    @apply text-center text-neutral-100 text-5xl font-normal font-Inter leading-10 mb-16;
+  }
+  .InnerFrame {
+    @apply w-full rounded-3xl bg-white lg:py-12 lg:px-14 px-4 py-10 text-black;
+    span:first-child {
+      @apply mb-3;
+    }
+    span {
+      @apply inline-block rounded-full text-xl lg:text-3xl bg-black py-3 px-5 text-white font-Inter;
+    }
+    .Head {
+      @apply flex items-center justify-center lg:justify-between max-xl:text-center flex-wrap mb-5;
+      .Text {
+        @apply 2xl:max-w-[345px] max-xl:w-full max-xl:text-center;
+        h4 {
+          @apply text-black text-5xl lg:text-6xl font-semibold font-Inter  mb-4;
+        }
+        p {
+          @apply xl:max-w-[570px] text-black text-opacity-50 text-base font-normal font-Inter leading-7;
+        }
+      }
+      img {
+        @apply xl:translate-x-14 max-xl:mx-auto;
+      }
+    }
+    ul.Body {
+      @apply flex flex-wrap xl:justify-between justify-center gap-y-16 gap-x-7;
+      li {
+        @apply xl:w-[48%] max-xl:max-w-[400px] flex gap-x-8 items-start;
+        p {
+          @apply max-w-[400px] font-medium font-Inter leading-7;
+        }
+      }
+    }
+  }
+}

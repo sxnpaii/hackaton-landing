@@ -1,5 +1,5 @@
 ---
-
+import "../styles/pages-styles/indexPage/sections/TimeLine.scss"
 ---
 
 <section class="TimeLine">
@@ -41,30 +41,3 @@
     </li>
   </ul>
 </section>
-
-<style lang="scss">
-  section.TimeLine {
-    @apply mb-48;
-    h6 {
-      @apply text-center text-orange-600 text-[22px] font-normal font-Inter mb-4;
-    }
-    h4 {
-      @apply text-center text-white text-4xl font-semibold font-Inter mb-20;
-    }
-    ul.TimeLine {
-      @apply xl:w-[80%] mx-auto lg:border-l ;
-      li {
-        @apply relative flex lg:flex-row flex-col lg:items-center lg:justify-between lg:gap-x-5 max-lg:gap-y-5 lg:p-16 p-10 lg:ml-24 border-b;
-        .star {
-          @apply max-lg:hidden lg:absolute lg:-left-[7.3rem];
-        }
-        b {
-          @apply text-white text-[28px] font-semibold font-Inter leading-[33.60px];
-        }
-        p {
-          @apply inline-block lg:w-[465px] opacity-70 text-red-200 font-normal font-Inter leading-loose;
-        }
-      }
-    }
-  }
-</style>

@@ -1,0 +1,93 @@
+---
+import Btn from "./Btn";
+const { className } = Astro.props;
+import "../styles/components-styles/Modal.scss";
+import { ID } from "appwrite";
+import { databases } from "../appwrite";
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+
+    const promise = databases.createDocument(
+      "6531ae33eeb88a1b712e",
+      "6531ae51830c66849377",
+      ID.unique(),
+      {
+        full_name: data.get("full_name"),
+        phone_number: data.get("phone_number"),
+        email: data.get("email"),
+        tg_nickname: data.get("tg_nickname"),
+        github_profile: data.get("github_profile"),
+      },
+    );
+    promise.then(
+      (res) => {
+        console.log(res);
+      },
+      (error) => {
+        console.log(error);
+      },
+    );
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+---
+
+<dialog class={`Modal ${className}`} data-aos="fade-in">
+  <div class="ModalHead">
+    <img src="/lighting.svg" class="lighting" />
+    <h4>Contact</h4>
+    <img src="/close.svg" class="close" />
+  </div>
+  <div class="ModalBody">
+    <div class="InfoText">
+      <p>
+        После регистрации добавьтесь в чат хакатона в Telegram по ссылке. Там вы
+        сможете найти команду или создать свою пригласив учасников.
+        <br />
+        <br />
+        <span> Внесите свои данные на этой странице и нажмите готово.</span>
+      </p>
+    </div>
+    <form method="POST" id="Modal_form_single">
+      <div class="required">
+        <div class="gr">
+          <label for="full_name">Имя/Фамилия</label>
+          <input type="text" name="full_name" required />
+        </div>
+        <div class="gr">
+          <label for="email">Email</label>
+          <input type="email" name="email" required />
+        </div>
+        <div class="gr">
+          <label for="tg_nickname">Ник в Telegram</label>
+          <input type="text" name="tg_nickname" required />
+        </div>
+        <div class="gr">
+          <label for="phone_number">Телефон</label>
+          <input type="number" name="phone_number" required />
+        </div>
+      </div>
+      <div class="gr">
+        <label for="github_profile">GitHub</label>
+        <input type="text" name="github_profile" />
+      </div>
+      <button type="submit" id="submitBtn">
+        <Btn>Готово</Btn>
+      </button>
+    </form>
+  </div>
+</dialog>
+
+<script>
+  let closeBtn = document.querySelector(".close");
+  let dialog = document.querySelector("dialog");
+
+  closeBtn.addEventListener("click", () => {
+    dialog.close();
+  });
+</script>

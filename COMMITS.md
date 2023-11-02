@@ -44,3 +44,10 @@
 - Created component `Footer`
 - Completed **ContactUs**, **Marquee**, **Location** sections
 - Project deployed to `Vercel` via vercel CLI
+
+### Commit №005
+
+- Rewrited styles to `styles/` directory and removed from `.astro` files
+- Created component `Modal` and form validation for single users
+- Added integration `preact` for jsx syntax support
+- Fixed bugs in code

@@ -1,6 +1,7 @@
 ---
 import Track from "../components/Track.astro";
 import { TracksSectData } from "../utils/localdata";
+import "../styles/pages-styles/indexPage/sections/Tracks.scss"
 ---
 
 <section class="Tracks">
@@ -75,27 +76,3 @@ import { TracksSectData } from "../utils/localdata";
   </div>
 </section>
 
-<style lang="scss">
-  section.Tracks {
-    @apply xl:w-[81%] mx-auto w-full mb-36;
-    h6 {
-      @apply font-['Inter'] mb-10;
-      img {
-        @apply inline-block w-[20px];
-      }
-    }
-    .Frame {
-      @apply flex items-end justify-center sm:justify-between max-sm:flex-wrap;
-      .RightSide,
-      .LeftSide {
-        @apply w-full;
-      }
-    }
-    .Bottom {
-      @apply flex items-start justify-center max-sm:flex-wrap;
-      .Tracks {
-        @apply w-full;
-      }
-    }
-  }
-</style>

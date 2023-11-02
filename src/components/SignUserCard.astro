@@ -1,6 +1,8 @@
 ---
-import Btn from "./Btn.astro";
+import Btn from "./Btn";
+import Modal from "./Modal.astro";
 const { data } = Astro.props;
+import "../styles/components-styles/SignUserCard.scss";
 ---
 
 <div class="SignUserCard" data-aos="fade-in" data-aos-duration="400">
@@ -9,33 +11,18 @@ const { data } = Astro.props;
     <ul>
         {data.info.map((el) => <li>+ {el}</li>)}
     </ul>
-    <Btn href="/" className="Btn">
+    <Btn className="Btn">
         {data.title === "Один" ? "Я готов" : "Мы готовы"}
     </Btn>
     <p>Подтверждаю участие</p>
 </div>
+<Modal className="Modal"  />
 
-<style lang="scss">
-    .SignUserCard {
-        @apply w-[500px] rounded-xl bg-[#141414] p-10 text-center;
+<script>
+    let btn = document.querySelector(".Btn");
+    let modal = document.querySelector(".Modal");
 
-        img {
-            @apply mx-auto max-w-[100px];
-        }
-
-        h6 {
-            @apply text-neutral-100 text-3xl font-normal font-Inter leading-[38.40px] mt-7 mb-5;
-        }
-
-        ul {
-            @apply text-left mb-12;
-
-            li {
-                @apply text-neutral-400 text-xl font-normal font-Inter leading-7 mb-2;
-            }
-        }
-        p {
-            @apply text-neutral-400 text-xs font-normal font-['Inter'] leading-7 mt-4;
-        }
-    }
-</style>
+    btn.addEventListener("click", () => {
+        modal.showModal();
+    });
+</script>

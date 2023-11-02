@@ -1,0 +1,21 @@
+section.Title {
+  @apply relative h-[70vh] sm:h-[80vh] flex items-center mb-16;
+  img.Cosmonaut {
+    @apply absolute top-0 right-0 max-md:max-w-[40%] max-w-[170px];
+  }
+  img.Cashmachine {
+    @apply absolute bottom-0 left-0 max-md:max-w-[40%] max-w-[170px];
+  }
+  .Frame {
+    @apply lg:w-[80%] mx-auto p-5 sm:p-10 rounded-3xl bg-[#B6DBD0]  text-white;
+    h2 {
+      @apply text-black font-Inter max-sm:text-4xl sm:text-6xl md:text-7xl font-semibold;
+      span {
+        @apply text-[#F3681A];
+      }
+    }
+    p {
+      @apply text-black text-xs opacity-50 font-Inter md:w-[40%];
+    }
+  }
+}
